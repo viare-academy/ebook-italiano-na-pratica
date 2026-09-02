@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Italiano na Prática • Livro Digital Oficial + Comunidade VIP no Telegram</title>
+  <meta name="description" content="O guia definitivo para falar e compreender o italiano real. E-book com +40 capítulos, comunidade VIP exclusiva no Telegram e assistente inteligente de correções 24h no privado." />
+
+  <!-- Favicon Nativo na Aba -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%230a291d' stroke='%23c59d42' stroke-width='3'/%3E%3Crect x='22' y='10' width='6.5' height='3.5' rx='1' fill='%23008C45'/%3E%3Crect x='28.5' y='10' width='7' height='3.5' fill='%23FFFFFF'/%3E%3Crect x='35.5' y='10' width='6.5' height='3.5' rx='1' fill='%23CD212A'/%3E%3Cpath d='M19 22 L32 48 L45 22' fill='none' stroke='%23c59d42' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='54' r='2' fill='%23c59d42'/%3E%3C/svg%3E" type="image/svg+xml" />
+
+  <!-- Google Fonts: Cormorant Garamond, Cinzel, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: {
+              50: '#fdfdfb',
+              100: '#faf9f5',
+              200: '#f4f1e9',
+              300: '#e8e3d5',
+              border: '#e6e0d2',
+            },
+            forest: {
+              950: '#061710',
+              900: '#0a2318',
+              850: '#0f2f21',
+              800: '#143c2b',
+              700: '#1d553d',
+            },
+            champagne: {
+              400: '#dfbc68',
+              500: '#c59d42',
+              600: '#a6812e',
+              700: '#7d601b',
+            }
+          },
+          fontFamily: {
+            serif: ['Cormorant Garamond', 'Georgia', 'serif'],
+            cinzel: ['Cinzel', 'Trajan Pro', 'serif'],
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #faf9f5;
+      color: #242c27;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+    }
+    .font-cormorant { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .font-cinzel { font-family: 'Cinzel', Trajan Pro, serif; }
+    
+    .italian-tricolor-line {
+      height: 3px;
+      background: linear-gradient(90deg, #008C45 0%, #008C45 33.3%, #ffffff 33.3%, #ffffff 66.6%, #CD212A 66.6%, #CD212A 100%);
+    }
+
+    .book-mockup-shadow {
+      box-shadow: -16px 20px 38px -10px rgba(10, 35, 24, 0.4), 0 0 0 1px rgba(197, 157, 66, 0.25);
+      border-radius: 4px 14px 14px 4px;
+      transform: perspective(1200px) rotateY(-7deg) rotateX(2deg);
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .book-mockup-shadow:hover {
+      transform: perspective(1200px) rotateY(-2deg) rotateX(0deg) translateY(-6px);
+      box-shadow: -22px 26px 48px -8px rgba(10, 35, 24, 0.5);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #dfbc68 0%, #c59d42 50%, #b28a2f 100%);
+      color: #061710;
+      box-shadow: 0 8px 24px -4px rgba(197, 157, 66, 0.4);
+      transition: all 0.3s ease;
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px -4px rgba(197, 157, 66, 0.55);
+      background: linear-gradient(135deg, #ebd08c 0%, #d4ad4e 50%, #bd9334 100%);
+    }
+  </style>
+</head>
+<body class="bg-paper-100 text-stone-800 antialiased selection:bg-champagne-400 selection:text-forest-950">
+
+  <!-- 1. BARRA SUPERIOR DISCRETA -->
+  <div class="italian-tricolor-line"></div>
+  <nav class="border-b border-paper-border bg-paper-50/90 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <span class="w-7 h-7 rounded-full bg-forest-900 text-champagne-400 flex items-center justify-center font-serif font-bold text-sm border border-champagne-500/40">
+          V
+        </span>
+        <div class="leading-none">
+          <span class="font-cinzel text-xs sm:text-sm font-bold tracking-wider text-forest-900 uppercase block">Método Viare</span>
+          <span class="text-[10px] text-stone-500 tracking-wide">Edição Oficial E-book • 2026</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <span class="hidden md:inline-flex text-xs text-stone-500 items-center gap-1.5 font-medium">
+          <span class="w-2 h-2 rounded-full bg-emerald-600 animate-pulse"></span>
+          Acesso Imediato via E-mail
+        </span>
+        <a href="#oferta" class="text-xs font-cinzel font-bold text-forest-900 border border-forest-900/30 hover:border-forest-900 px-3.5 py-1.5 rounded-full transition-all tracking-wider uppercase">
+          Garantir E-book &rarr;
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 2. HERO PRINCIPAL (MINIMALISTA, FORTE E EDITORIAL) -->
+  <section class="pt-10 pb-16 sm:pt-16 sm:pb-24 overflow-hidden relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Texto da Hero (7 Colunas) -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-900/5 border border-forest-900/15 text-forest-900 text-xs font-semibold tracking-wider uppercase font-cinzel">
+            <span>🇮🇹</span>
+            <span>O Guia Definitivo do Idioma Real</span>
+          </div>
+
+          <h1 class="font-cormorant text-4xl sm:text-6xl lg:text-6xl font-normal tracking-tight text-forest-950 leading-[1.08]">
+            Aprenda a falar, ler e viver o <span class="italic font-medium text-forest-900 underline decoration-champagne-500/50 underline-offset-4">italiano autêntico</span>. Sem complicação.
+          </h1>
+
+          <p class="text-base sm:text-lg text-stone-600 leading-relaxed max-w-xl mx-auto lg:mx-0 font-light">
+            Um <strong>e-book completo e direto ao ponto (+40 capítulos)</strong> combinado com o apoio de uma <strong>comunidade VIP exclusiva no Telegram</strong> e um <strong>assistente de erros com IA disponível 24h</strong> que analisa suas mensagens no privado.
+          </p>
+
+          <!-- 3 Pílulas Minimalistas de Valor -->
+          <div class="pt-1 flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-3 text-xs text-stone-700">
+            <span class="inline-flex items-center gap-1.5 bg-paper-50 px-3 py-1.5 rounded-lg border border-paper-border shadow-sm">
+              <span class="text-champagne-600 font-bold">📖</span> Livro Digital (+40 Capítulos)
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-paper-50 px-3 py-1.5 rounded-lg border border-paper-border shadow-sm">
+              <span class="text-sky-600 font-bold">✈️</span> Comunidade VIP Telegram
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-paper-50 px-3 py-1.5 rounded-lg border border-paper-border shadow-sm">
+              <span class="text-emerald-700 font-bold">🤖</span> Correção IA 24h no Privado
+            </span>
+          </div>
+
+          <!-- Chamada de Ação e Preço -->
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a 
+              href="https://pay.kiwify.com.br/UhvUqAv" 
+              target="_blank"
+              class="btn-gold w-full sm:w-auto px-8 py-4 rounded-xl text-center font-bold text-sm tracking-wider uppercase font-cinzel flex items-center justify-center gap-2 group"
+            >
+              <span>QUERO O E-BOOK + ACESSO VITALÍCIO</span>
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+            
+            <div class="text-center sm:text-left text-xs text-stone-500">
+              <div class="text-stone-400 line-through">De R$ 297,00</div>
+              <div class="text-forest-950 font-bold text-sm">
+                Por apenas <strong class="text-base text-forest-900">R$ 97,00</strong> <span class="font-normal text-stone-500">(ou 12x de R$ 9,74)</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-[11px] text-stone-400 flex items-center justify-center lg:justify-start gap-3 pt-1">
+            <span>🔒 Pagamento Seguro Kiwify</span>
+            <span>•</span>
+            <span>⚡ Acesso Imediato</span>
+            <span>•</span>
+            <span>♾️ Vitalício</span>
+          </p>
+
+        </div>
+
+        <!-- Mockup 3D Real do Livro (5 Colunas) -->
+        <div class="lg:col-span-5 flex justify-center relative">
+          <div class="relative max-w-[310px] sm:max-w-[340px] w-full">
+            
+            <!-- Brilho sutil dourado de fundo -->
+            <div class="absolute inset-0 bg-champagne-500/15 blur-3xl rounded-full transform -rotate-6 scale-95 pointer-events-none -z-10"></div>
+            
+            <!-- Imagem Oficial da Capa com efeito de Livro Real -->
+            <div class="book-mockup-shadow bg-forest-950 overflow-hidden border border-champagne-500/30 relative group">
+              <img 
+                src="capa_livro.png" 
+                alt="Capa Oficial do E-book Italiano na Prática" 
+                class="w-full h-auto block select-none"
+              />
+              <!-- Efeito de brilho na lombada/borda -->
+              <div class="absolute inset-y-0 left-0 w-3 bg-gradient-to-r from-black/40 via-white/10 to-transparent pointer-events-none"></div>
+            </div>
+
+            <!-- Badge flutuante sutil -->
+            <div class="absolute -bottom-4 right-2 bg-forest-900 text-paper-50 px-3.5 py-2 rounded-xl text-xs shadow-lg border border-champagne-500/40 flex items-center gap-2 backdrop-blur-sm">
+              <span class="text-champagne-400 text-base">✦</span>
+              <div>
+                <p class="font-cinzel text-[11px] font-bold text-champagne-300 uppercase leading-none">Edição Digital 2026</p>
+                <p class="text-[10px] text-stone-300 leading-tight">PDF + Comunidade Telegram Inclusa</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 3. OS TRÊS PILARES DA EXPERIÊNCIA (SEM OVERWHELM) -->
+  <section class="py-16 sm:py-20 border-t border-paper-border bg-paper-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-2 mb-12">
+        <span class="text-xs font-cinzel font-bold text-champagne-600 uppercase tracking-widest">O Que Você Recebe</span>
+        <h2 class="font-cormorant text-3xl sm:text-4xl text-forest-950 font-normal">
+          Tudo o que você precisa. Nada de excesso.
+        </h2>
+        <p class="text-stone-600 text-sm font-light">
+          Eliminamos as centenas de horas de vídeo cansativo e a teoria inútil. Você recebe o núcleo essencial para entender e se comunicar em italiano.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Pilar 1 -->
+        <div class="bg-paper-100 p-6 sm:p-7 rounded-2xl border border-paper-border shadow-sm hover:border-champagne-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-forest-900/10 text-forest-900 font-bold text-xl flex items-center justify-center">
+              📖
+            </div>
+            <h3 class="font-cormorant text-2xl font-bold text-forest-950">
+              O Livro Digital Oficial
+            </h3>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
+              <strong>+40 capítulos organizados em 8 módulos lógicos</strong>. Da fonética secreta do 'C' e 'G' aos tempos passados, modais e conversação natural. Diagramado para leitura confortável em qualquer tela.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-paper-border text-[11px] font-mono text-champagne-700 font-semibold uppercase tracking-wider">
+            PDF Completo + Cadernos
+          </div>
+        </div>
+
+        <!-- Pilar 2 -->
+        <div class="bg-paper-100 p-6 sm:p-7 rounded-2xl border border-paper-border shadow-sm hover:border-champagne-500/50 transition-all flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-sky-500/10 text-sky-700 font-bold text-xl flex items-center justify-center">
+              ✈️
+            </div>
+            <h3 class="font-cormorant text-2xl font-bold text-forest-950">
+              Comunidade VIP no Telegram
+            </h3>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
+              Acesso direto ao grupo exclusivo de alunos e leitores. Um ambiente motivador para praticar o idioma diariamente, trocar dúvidas, materiais e dicas práticas sobre viagens e vida na Itália.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-paper-border text-[11px] font-mono text-sky-800 font-semibold uppercase tracking-wider">
+            Networking & Prática Diária
+          </div>
+        </div>
+
+        <!-- Pilar 3 -->
+        <div class="bg-paper-100 p-6 sm:p-7 rounded-2xl border-2 border-champagne-500/50 shadow-md relative flex flex-col justify-between">
+          <div class="absolute -top-2.5 right-4 bg-forest-900 text-champagne-300 text-[10px] font-cinzel font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">
+            Destaque Exclusivo
+          </div>
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-xl bg-forest-900 text-champagne-400 font-bold text-xl flex items-center justify-center">
+              🤖
+            </div>
+            <h3 class="font-cormorant text-2xl font-bold text-forest-950">
+              Assistente de Erros 24h
+            </h3>
+            <p class="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
+              Nunca mais trave por medo de falar errado. Escreva em italiano e nosso assistente analisa sua mensagem <strong>no seu privado do Telegram</strong>, explicando a regra gramatical e como um nativo diria.
+            </p>
+          </div>
+          <div class="mt-6 pt-3 border-t border-paper-border text-[11px] font-mono text-forest-900 font-bold uppercase tracking-wider">
+            Feedback Privado & Ilimitado
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. PREVIEW COMPACTO DAS PÁGINAS (ANTI-SPOILER & ALTA DEFINIÇÃO) -->
+  <section class="py-16 sm:py-20 border-t border-paper-border" id="amostra">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center max-w-xl mx-auto space-y-2 mb-12">
+        <span class="text-xs font-cinzel font-bold text-champagne-600 uppercase tracking-widest">Uma Pequena Amostra</span>
+        <h2 class="font-cormorant text-3xl sm:text-4xl text-forest-950 font-normal">
+          Folheie a diagramação por dentro
+        </h2>
+        <p class="text-stone-600 text-xs sm:text-sm font-light leading-relaxed">
+          Pequenas prévias para você conferir a beleza visual e as tabelas didáticas do livro, mantendo o conteúdo protegido de spoilers.
+        </p>
+      </div>
+
+      <!-- Grade de 4 Mini-Spreads com Efeito de Caderno/Tablet & Gradiente Anti-Spoiler -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1: Sumário -->
+        <div class="bg-white p-3.5 rounded-2xl border border-paper-border shadow-sm hover:shadow-md hover:border-champagne-500/40 transition-all flex flex-col group">
+          <div class="relative rounded-xl overflow-hidden bg-stone-50 border border-stone-200/60 aspect-[3/4] flex items-start justify-center">
+            <img 
+              src="preview_sumario.png" 
+              alt="Prévia do Sumário" 
+              class="w-full h-auto object-cover object-top filter brightness-[0.98] group-hover:scale-105 transition-transform duration-500" 
+            />
+            <!-- Overlay gradiente anti-spoiler -->
+            <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white via-white/85 to-transparent flex items-end justify-center pb-3">
+              <span class="text-[10px] font-cinzel font-bold text-forest-900 bg-paper-100/95 border border-paper-border px-3 py-1 rounded-full shadow-xs flex items-center gap-1">
+                <span>🔒</span> Prévia do Sumário
+              </span>
+            </div>
+          </div>
+          <div class="pt-3 px-1 space-y-1">
+            <span class="text-[10px] font-mono text-champagne-600 font-bold uppercase tracking-wider block">Módulos 1 ao 8</span>
+            <h4 class="font-cormorant text-lg font-bold text-forest-950 leading-snug">Sumário Cronológico</h4>
+            <p class="text-[11px] text-stone-500 font-light leading-relaxed">
+              Mapeamento de 40 capítulos sequenciais do básico à autonomia.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: Capítulo 3 Essere & Acento -->
+        <div class="bg-white p-3.5 rounded-2xl border border-paper-border shadow-sm hover:shadow-md hover:border-champagne-500/40 transition-all flex flex-col group">
+          <div class="relative rounded-xl overflow-hidden bg-stone-50 border border-stone-200/60 aspect-[3/4] flex items-start justify-center">
+            <img 
+              src="preview_cap3_essere.png" 
+              alt="Prévia do Capítulo 3" 
+              class="w-full h-auto object-cover object-top filter brightness-[0.98] group-hover:scale-105 transition-transform duration-500" 
+            />
+            <!-- Overlay gradiente anti-spoiler -->
+            <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white via-white/85 to-transparent flex items-end justify-center pb-3">
+              <span class="text-[10px] font-cinzel font-bold text-forest-900 bg-paper-100/95 border border-paper-border px-3 py-1 rounded-full shadow-xs flex items-center gap-1">
+                <span>🔒</span> Amostra Didática
+              </span>
+            </div>
+          </div>
+          <div class="pt-3 px-1 space-y-1">
+            <span class="text-[10px] font-mono text-champagne-600 font-bold uppercase tracking-wider block">Teoria Prática</span>
+            <h4 class="font-cormorant text-lg font-bold text-forest-950 leading-snug">Verbos & Caixas de Regra</h4>
+            <p class="text-[11px] text-stone-500 font-light leading-relaxed">
+              Tabelas claras e avisos sobre o acento que muda o sentido das frases.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3: Capítulo 2 Cumprimentos -->
+        <div class="bg-white p-3.5 rounded-2xl border border-paper-border shadow-sm hover:shadow-md hover:border-champagne-500/40 transition-all flex flex-col group">
+          <div class="relative rounded-xl overflow-hidden bg-stone-50 border border-stone-200/60 aspect-[3/4] flex items-start justify-center">
+            <img 
+              src="preview_cap2_cumprimentos.png" 
+              alt="Prévia do Capítulo 2" 
+              class="w-full h-auto object-cover object-top filter brightness-[0.98] group-hover:scale-105 transition-transform duration-500" 
+            />
+            <!-- Overlay gradiente anti-spoiler -->
+            <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white via-white/85 to-transparent flex items-end justify-center pb-3">
+              <span class="text-[10px] font-cinzel font-bold text-forest-900 bg-paper-100/95 border border-paper-border px-3 py-1 rounded-full shadow-xs flex items-center gap-1">
+                <span>🔒</span> Amostra de Situação
+              </span>
+            </div>
+          </div>
+          <div class="pt-3 px-1 space-y-1">
+            <span class="text-[10px] font-mono text-champagne-600 font-bold uppercase tracking-wider block">Vida Cotidiana</span>
+            <h4 class="font-cormorant text-lg font-bold text-forest-950 leading-snug">O Relógio dos Cumprimentos</h4>
+            <p class="text-[11px] text-stone-500 font-light leading-relaxed">
+              Como usar Ciao, Salve, Buongiorno e Buonanotte com naturalidade.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 4: Caderno de Exercícios -->
+        <div class="bg-white p-3.5 rounded-2xl border border-paper-border shadow-sm hover:shadow-md hover:border-champagne-500/40 transition-all flex flex-col group">
+          <div class="relative rounded-xl overflow-hidden bg-stone-50 border border-stone-200/60 aspect-[3/4] flex items-start justify-center">
+            <img 
+              src="preview_exercicios.png" 
+              alt="Prévia de Exercícios" 
+              class="w-full h-auto object-cover object-top filter brightness-[0.98] group-hover:scale-105 transition-transform duration-500" 
+            />
+            <!-- Overlay gradiente anti-spoiler -->
+            <div class="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white via-white/85 to-transparent flex items-end justify-center pb-3">
+              <span class="text-[10px] font-cinzel font-bold text-forest-900 bg-paper-100/95 border border-paper-border px-3 py-1 rounded-full shadow-xs flex items-center gap-1">
+                <span>🔒</span> Amostra de Fixação
+              </span>
+            </div>
+          </div>
+          <div class="pt-3 px-1 space-y-1">
+            <span class="text-[10px] font-mono text-champagne-600 font-bold uppercase tracking-wider block">Fixação com Gabarito</span>
+            <h4 class="font-cormorant text-lg font-bold text-forest-950 leading-snug">Cadernos Práticos</h4>
+            <p class="text-[11px] text-stone-500 font-light leading-relaxed">
+              Questões dinâmicas sobre compras, farmácia, saúde e mini-diálogos.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center pt-8">
+        <p class="text-xs text-stone-500 font-light">
+          ✨ Diagramação completa de alta definição incluída no formato PDF oficial para leitura imediata.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. COMO FUNCIONA O ASSISTENTE NO TELEGRAM (DEMO VISUAL LIMPA) -->
+  <section class="py-16 sm:py-20 bg-forest-900 text-paper-50 border-y border-champagne-500/20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      
+      <div class="text-center space-y-3 mb-12">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-champagne-500/15 border border-champagne-500/30 text-champagne-300 text-xs font-semibold uppercase tracking-wider font-cinzel">
+          <span>💬</span> No Seu Telegram • 24h por Dia
+        </div>
+        <h2 class="font-cormorant text-3xl sm:text-5xl font-normal text-white">
+          Um professor no seu bolso para quando bater a dúvida
+        </h2>
+        <p class="text-stone-300 text-xs sm:text-sm max-w-xl mx-auto font-light leading-relaxed">
+          Estudar sozinho costuma falhar porque você nunca tem certeza se escreveu certo. Com o assistente Viare no Telegram, essa insegurança acaba:
+        </p>
+      </div>
+
+      <!-- Mockup do Chat do Telegram -->
+      <div class="max-w-md mx-auto bg-forest-950/80 rounded-2xl border border-champagne-500/30 shadow-2xl p-4 sm:p-5 space-y-4 backdrop-blur-md">
+        
+        <!-- Header do Chat -->
+        <div class="flex items-center gap-3 pb-3 border-b border-white/10">
+          <div class="w-9 h-9 rounded-full bg-champagne-500/20 border border-champagne-400 flex items-center justify-center font-bold text-champagne-300 text-xs">
+            🇮🇹
+          </div>
+          <div>
+            <h4 class="text-xs sm:text-sm font-bold text-white flex items-center gap-1.5">
+              Viare Assistant Bot
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            </h4>
+            <p class="text-[10px] text-stone-400">Telegram Bot Oficial • Resposta instantânea</p>
+          </div>
+        </div>
+
+        <!-- Mensagens -->
+        <div class="space-y-3 text-xs">
+          
+          <!-- Mensagem do Aluno -->
+          <div class="flex justify-end">
+            <div class="bg-emerald-800/80 text-white p-3 rounded-2xl rounded-tr-sm max-w-[85%] border border-emerald-700/50 space-y-1">
+              <p class="font-mono">"Voglio un cappuccino e uno brioche"</p>
+              <span class="text-[9px] text-emerald-300 block text-right">14:32</span>
+            </div>
+          </div>
+
+          <!-- Resposta do Bot no Privado -->
+          <div class="flex justify-start">
+            <div class="bg-forest-900/90 text-stone-200 p-3.5 rounded-2xl rounded-tl-sm max-w-[90%] border border-champagne-500/40 space-y-2">
+              <div class="flex items-center justify-between text-[11px] font-bold text-champagne-300 pb-1 border-b border-white/10">
+                <span>✅ Sugestão de Correção</span>
+                <span class="text-[9px] font-normal text-stone-400">Agora</span>
+              </div>
+              <p class="font-mono text-emerald-300 font-bold">
+                "Vorrei un cappuccino e una brioche."
+              </p>
+              <div class="text-[11px] text-stone-300 space-y-1 leading-relaxed">
+                <p><strong>1) Cortesia:</strong> Na Itália, usar <em>"Voglio"</em> (eu quero) soa deselegante. O padrão nativo e educado é o condicional <em>"Vorrei"</em> (eu gostaria).</p>
+                <p><strong>2) Gênero:</strong> <em>Brioche</em> é feminino, logo o artigo correto é <strong>una</strong> (e não <em>uno</em>).</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="text-center pt-8">
+        <p class="text-xs text-stone-300 font-light">
+          Acesso vitalício incluso para todos os compradores do e-book.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 6. BOX DE OFERTA MINIMALISTA (ALTA CONVERSÃO) -->
+  <section class="py-16 sm:py-24" id="oferta">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6">
+      
+      <div class="bg-paper-50 rounded-3xl border-2 border-champagne-500/60 shadow-xl overflow-hidden relative">
+        
+        <!-- Faixa de Oferta -->
+        <div class="bg-gradient-to-r from-forest-900 via-forest-850 to-forest-900 text-champagne-300 text-center py-2.5 px-4 font-cinzel text-xs font-bold tracking-widest uppercase border-b border-champagne-500/30">
+          ✦ OFERTA ESPECIAL DE LANÇAMENTO • ACESSO VITALÍCIO ✦
+        </div>
+
+        <div class="p-6 sm:p-10 space-y-8">
+          
+          <!-- Título -->
+          <div class="text-center space-y-2">
+            <h2 class="font-cormorant text-3xl sm:text-5xl font-bold text-forest-950">
+              Italiano na Prática • Master Class
+            </h2>
+            <p class="text-xs sm:text-sm text-stone-600 max-w-md mx-auto font-light">
+              Adquira o e-book oficial e receba acesso vitalício imediato à comunidade exclusiva e ao assistente de erros 24h.
+            </p>
+          </div>
+
+          <!-- O Que Está Incluso -->
+          <div class="bg-paper-100 rounded-2xl p-5 sm:p-6 border border-paper-border space-y-3">
+            <h4 class="font-cinzel text-xs font-bold text-forest-950 uppercase tracking-wider border-b border-paper-border pb-2">
+              Você vai receber imediatamente:
+            </h4>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-stone-700">
+              <li class="flex items-start gap-2.5">
+                <span class="text-champagne-600 font-bold">✔</span>
+                <span><strong>E-book Completo Italiano na Prática:</strong> 8 Módulos com +40 Capítulos diagramados (Valor normal: <span class="line-through text-stone-400">R$ 297</span>)</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-champagne-600 font-bold">✔</span>
+                <span><strong>Acesso à Comunidade VIP no Telegram:</strong> Conversação e suporte diário com alunos — <strong class="text-forest-900">GRÁTIS</strong></span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-champagne-600 font-bold">✔</span>
+                <span><strong>Assistente de Correções IA 24h:</strong> Feedback cirúrgico no privado a qualquer momento — <strong class="text-forest-900">GRÁTIS</strong></span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-champagne-600 font-bold">✔</span>
+                <span><strong>Pack de Cadernos de Exercícios:</strong> Questões práticas com gabarito comentado</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-champagne-600 font-bold">✔</span>
+                <span><strong>Guia de Bolso para Viagens:</strong> Frases prontas para aeroporto, hotel, trem e trattoria</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-champagne-600 font-bold">✔</span>
+                <span><strong>Acesso Vitalício:</strong> Pague uma única vez, sem mensalidades nem surpresas</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Preço Ancorado -->
+          <div class="text-center space-y-1">
+            <span class="text-xs text-stone-400 line-through">De R$ 297,00 por apenas</span>
+            <div class="font-cormorant text-4xl sm:text-6xl font-bold text-forest-950 tracking-tight">
+              R$ 97<span class="text-2xl sm:text-3xl font-sans font-medium text-stone-600">,00</span>
+            </div>
+            <p class="text-xs text-stone-500 pt-1">
+              ou em até <strong class="text-forest-900 font-semibold">12x de R$ 9,74</strong> no cartão de crédito ou PIX imediato
+            </p>
+          </div>
+
+          <!-- Botão de Compra -->
+          <div class="space-y-3">
+            <a 
+              href="https://pay.kiwify.com.br/UhvUqAv" 
+              target="_blank"
+              class="btn-gold w-full py-4 sm:py-5 px-6 rounded-2xl text-center font-bold text-sm sm:text-base tracking-wider uppercase font-cinzel flex items-center justify-center gap-2 block"
+            >
+              <span>QUERO GARANTIR MEU ACESSO POR R$ 97</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+
+            <div class="flex flex-wrap items-center justify-center gap-4 text-xs text-stone-500 pt-1">
+              <span class="flex items-center gap-1">🔒 Compra 100% Segura</span>
+              <span class="flex items-center gap-1">⚡ Liberação Imediata</span>
+              <span class="flex items-center gap-1">♾️ Acesso Vitalício</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. FAQ ENXUTO (4 PERGUNTAS DIRETAS) -->
+  <section class="py-14 border-t border-paper-border bg-paper-50" id="duvidas">
+    <div class="max-w-2xl mx-auto px-4 sm:px-6 space-y-8">
+      
+      <div class="text-center space-y-1">
+        <span class="text-xs font-cinzel font-bold text-champagne-600 uppercase tracking-widest">Dúvidas Comuns</span>
+        <h3 class="font-cormorant text-2xl sm:text-3xl text-forest-950">Perguntas & Respostas</h3>
+      </div>
+
+      <div class="space-y-3">
+        
+        <div class="bg-paper-100 rounded-xl border border-paper-border p-4 sm:p-5 space-y-2">
+          <h4 class="text-xs sm:text-sm font-bold text-forest-950">1. Como recebo o e-book e o acesso ao Telegram?</h4>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
+            Assim que seu pagamento for confirmado, você receberá um e-mail com o link para download imediato do e-book em PDF e o convite exclusivo para ingressar no grupo VIP do Telegram com o assistente IA. Pagamentos via PIX e cartão são liberados em segundos.
+          </p>
+        </div>
+
+        <div class="bg-paper-100 rounded-xl border border-paper-border p-4 sm:p-5 space-y-2">
+          <h4 class="text-xs sm:text-sm font-bold text-forest-950">2. Em quais aparelhos posso ler o livro?</h4>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
+            O material está em formato PDF de alta resolução, compatível com qualquer celular (Android e iPhone), tablet, iPad, computador ou leitor digital (Kindle). Você pode ler online ou baixar para ler sem internet.
+          </p>
+        </div>
+
+        <div class="bg-paper-100 rounded-xl border border-paper-border p-4 sm:p-5 space-y-2">
+          <h4 class="text-xs sm:text-sm font-bold text-forest-950">3. O acesso ao e-book e ao assistente é vitalício mesmo?</h4>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
+            Sim! Você paga uma única vez o valor promocional de R$ 97 e o e-book é seu para sempre, bem como o acesso ao grupo no Telegram e ao assistente de correções. Sem renovações ou mensalidades.
+          </p>
+        </div>
+
+        <div class="bg-paper-100 rounded-xl border border-paper-border p-4 sm:p-5 space-y-2">
+          <h4 class="text-xs sm:text-sm font-bold text-forest-950">4. Serve para quem está saindo do zero absoluto?</h4>
+          <p class="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
+            Com certeza. O método foi desenvolvido justamente para quem não sabe nada de italiano, começando pela fonética dos sons, primeiras palavras e cumprimentos, construindo a base de forma sólida e sem traumas.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 8. FOOTER MINIMALISTA -->
+  <footer class="py-8 border-t border-paper-border text-center text-xs text-stone-500 space-y-3 bg-paper-100">
+    <div class="max-w-4xl mx-auto px-4">
+      <p class="font-serif text-sm font-bold text-forest-900">Italiano na Prática • Master Class Viare</p>
+      <p class="text-[11px] text-stone-400">Todos os direitos reservados. Material protegido por direitos autorais.</p>
+      
+      <div class="pt-2 flex items-center justify-center gap-1 text-[11px] text-stone-400">
+        <span>Powered by</span>
+        <span class="text-emerald-700 font-bold">kiwify</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
